@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Bio from '../components/Bio.astro';
 
 const {content} = Astro.props;
 const {title, description, publishDate, author, heroImage, permalink, alt} = content;
@@ -16,7 +17,7 @@ const {title, description, publishDate, author, heroImage, permalink, alt} = con
       <slot />
     </article>
     <hr />
-    <!-- <Bio /> -->
+    <Bio />
   </div>
 </BaseLayout>
 

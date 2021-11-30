@@ -1,0 +1,43 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const {content} = Astro.props;
+const {title, description, publishDate, author, heroImage, permalink, alt} = content;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink}>
+  <header>
+    <p>{publishDate} ~ {'TODO: READING TIME'}</p>
+    <h1>{title}</h1>
+    <hr />
+  </header>
+  <div class="container">
+    <article class="content">
+      <slot />
+    </article>
+    <hr />
+    <!-- <Bio /> -->
+  </div>
+</BaseLayout>
+
+<style>
+  header {
+    text-align: center;
+  }
+
+  header h1 {
+    margin-bottom: 0.7em;
+  }
+
+  header p {
+    color: #AAA;
+    text-transform: uppercase;
+    font-family: Rubik, sans-serif;
+    font-weight: 600;
+  }
+
+  header hr {
+    min-width: 100px;
+    width: 30%;
+  }
+</style>

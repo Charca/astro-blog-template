@@ -3,29 +3,32 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const title = 'Blog';
 const description = 'Latest articles.';
-const permalink = 'https://example.com/blog';
+const permalink = `${Astro.site.href}blog`;
 
-let allPosts = await Astro.fetchContent('./posts/*.md');
+let allPosts = await Astro.fetchContent('../../data/blog-posts/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="blog">
   <div class="container">
     <h1>Blog</h1>
-    {allPosts.map((post, index) => (
-      <div>
-        { index !== 0 && <hr /> }
-        <div class="post-item">
-          <h2>
-            <a href={post.url}>{post.title}</a>
-          </h2>
-          <p>{post.description}</p>
-          <div class="post-item-footer">
-            <span class="post-item-date">— {post.publishDate}</span>
+    {allPosts.map((post, index) => {
+      const href = `/blog/${post.file.pathname.split('/').pop().split('.').shift()}`;
+      return (
+        <div>
+          { index !== 0 && <hr /> }
+          <div class="post-item">
+            <h2>
+              <a href={href}>{post.title}</a>
+            </h2>
+            <p>{post.description}</p>
+            <div class="post-item-footer">
+              <span class="post-item-date">— {post.publishDate}</span>
+            </div>
           </div>
         </div>
-      </div>
-    ))}
+      )
+    })}
   </div>
 </BaseLayout>
 

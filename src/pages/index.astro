@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = 'My Astro Blog';
 const description = 'The perfect starter for your perfect blog.';
-const permalink = 'https://example.com/';
+const permalink = Astro.site.href;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink}>

@@ -1,9 +1,18 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-import Bio from '../components/Bio.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Bio from '../../components/Bio.astro';
 
-const {content} = Astro.props;
-const {title, description, publishDate, author, heroImage, permalink, alt} = content;
+export function getStaticPaths() {
+  const posts = Astro.fetchContent('../../data/blog-posts/*.md');
+  return posts.map(p => ({
+    params: { slug: p.file.pathname.split('/').pop().split('.').shift() },
+    props: { post: p },
+  }));
+}
+
+const { Content, title, description, publishDate, heroImage } = Astro.props.post;
+const slug = Astro.props.post.file.pathname.split('/').pop().split('.').shift();
+const permalink = `${Astro.site.href}${slug}`;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="blog">
@@ -14,7 +23,7 @@ const {title, description, publishDate, author, heroImage, permalink, alt} = con
   </header>
   <div class="container">
     <article class="content">
-      <slot />
+      <Content />
     </article>
     <hr />
     <Bio />

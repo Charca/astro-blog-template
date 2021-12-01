@@ -10,13 +10,16 @@ const permalink = Astro.site.href;
   <div class="home-container">
     <div class="home-copy">
       <h1>Welcome to your new Astro Blog</h1>
-      <p>Check out the docs on <a href="https://www.github.com/Charca/astro-blog-template" target="_blank">GitHub</a> to get started.</p>
+      <p>Check out the docs on <a href="https://www.github.com/Charca/astro-blog-template" target="_blank" rel="noopener">GitHub</a> to get started.</p>
     </div>
 
     <figure>
       <img alt='Illustration of person reading a book' src='/assets/home-illustration.webp'>
       <figcaption>
-        Illustration by <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6">Icons 8</a> from <a href="https://icons8.com/illustrations">Ouch!</a>
+        Illustration by
+        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
+        from
+        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
       </figcaption>
     </figure>
   </div>
@@ -54,11 +57,13 @@ const permalink = Astro.site.href;
   figcaption {
     font-size: .8em;
     font-style: italic;
+    text-align: left;
   }
 
   img {
     width: 100%;
     max-width: 550px;
+    margin-bottom: 1em;
   }
 
   @media (max-width: 1200px) {

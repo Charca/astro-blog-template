@@ -1,5 +1,5 @@
 [ ] Update README
-[ ] Install Fonts
+[x] Install Fonts
 [x] Style Code blocks
 [x] Highlight current navigation item
 [ ] Use css variables
@@ -7,4 +7,4 @@
 [x] Resize Logo
 [ ] Reading time
 [x] Bio component
-[ ] Add social image
+[x] Add social image

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Bio from '../../components/Bio.astro';
+import getPostData from '../../utils/getPostData';
 
 export function getStaticPaths() {
   const posts = Astro.fetchContent('../../data/blog-posts/*.md');
@@ -11,13 +12,13 @@ export function getStaticPaths() {
 }
 
 const { Content, title, description, publishDate, heroImage } = Astro.props.post;
-const slug = Astro.props.post.file.pathname.split('/').pop().split('.').shift();
+const { slug, readingTime } = getPostData(Astro.props.post);
 const permalink = `${Astro.site.href}${slug}`;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="blog">
   <header>
-    <p>{publishDate} ~ {'TODO: READING TIME'}</p>
+    <p>{publishDate} ~ {readingTime}</p>
     <h1>{title}</h1>
     <hr />
   </header>

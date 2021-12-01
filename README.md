@@ -1,8 +1,28 @@
-# Welcome to [Astro](https://astro.build)
+# [Astro](https://astro.build) Blog Template
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/starter)
+![Screenshot](screenshot.png)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 👉 Check out the [✨ Live Demo ✨](https://astro-blog-template.netlify.app/)
+
+## 👩‍🚀 Getting Started
+
+### Locally
+
+```
+npm init astro -- --template Charca/astro-blog-template
+```
+
+### On StackBlitz
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/charca/astro-blog-template)
+
+## ✨ Features:
+
+- ✅ Dark Mode
+- ✅ Full Markdown support
+- ✅ SEO-friendly setup with canonical URLs and OpenGraph data
+- ✅ RSS 2.0 generation
+- ✅ Sitemap.xml generation
 
 ## 🚀 Project Structure
 
@@ -34,10 +54,10 @@ All commands are run from the root of the project, from a terminal:
 | Command           | Action                                       |
 |:----------------  |:-------------------------------------------- |
 | `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
+| `npm run dev`     | Starts local dev server at `localhost:3030`  |
 | `npm run build`   | Build your production site to `./dist/`      |
 | `npm run preview` | Preview your build locally, before deploying |
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [Astro's documentation](https://github.com/withastro/astro) or jump into Astro's [Discord server](https://astro.build/chat).

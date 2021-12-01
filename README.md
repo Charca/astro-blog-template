@@ -1,8 +1,8 @@
 # [Astro](https://astro.build) Blog Template
 
-![Screenshot](screenshot.png)
+[![Screenshot](screenshot.png)](https://astro-blog-template.netlify.app/)
 
-## 👉 Check out the [✨ Live Demo ✨](https://astro-blog-template.netlify.app/)
+## 👉 Check out the ✨ [Live Demo](https://astro-blog-template.netlify.app/) ✨
 
 ## 👩‍🚀 Getting Started
 

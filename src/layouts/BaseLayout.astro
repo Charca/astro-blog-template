@@ -7,8 +7,9 @@ export interface Props {
   title: string;
   description: string;
   permalink: string;
+  current?: string;
 }
-const { title, description, permalink } = Astro.props;
+const { title, description, permalink, current } = Astro.props;
 ---
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@ const { title, description, permalink } = Astro.props;
 </head>
 <body>
   <div class="layout">
-    <Header />
+    <Header current={current} />
 
     <main>
       <slot />

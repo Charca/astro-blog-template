@@ -2,7 +2,7 @@
 import Logo from './Logo.astro'
 import Nav from './Nav.astro'
 
-// TODO: Pass current page to Nav
+const { current = '' } = Astro.props;
 ---
 
 <style>
@@ -17,5 +17,5 @@ import Nav from './Nav.astro'
 
 <header>
   <Logo />
-  <Nav />
+  <Nav current={current} />
 </header>

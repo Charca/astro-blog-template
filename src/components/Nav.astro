@@ -1,5 +1,5 @@
 ---
-const { segment = '' } = Astro.props;
+const { current = '' } = Astro.props;
 ---
 
 <style>
@@ -44,12 +44,12 @@ const { segment = '' } = Astro.props;
   }
 
   .selected::before {
-    background: #fd6378;
+    background: var(--primary-color);
   }
 </style>
 
 <nav>
-  <a class='{segment === "" ? "selected" : ""}' href='/'>home</a>
-  <a class='{segment === "about" ? "selected" : ""}' href='/about'>about</a>
-  <a class='{segment === "blog" ? "selected" : ""}' href='/blog'>blog</a>
+  <a class={current === "" ? "selected" : ""} href='/'>home</a>
+  <a class={current === "about" ? "selected" : ""} href='/about'>about</a>
+  <a class={current === "blog" ? "selected" : ""} href='/blog'>blog</a>
 </nav>

@@ -1,8 +1,9 @@
 [ ] Update README
 [ ] Install Fonts
 [ ] Style Code blocks
-[ ] Highlight current navigation item
+[x] Highlight current navigation item
 [ ] Use css variables
 [ ] Dark mode
-[ ] Resize Logo
+[x] Resize Logo
 [ ] Reading time
+[x] Bio component

@@ -1,10 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-interface MarkdownFrontmatter {
-  publishDate: number;
-}
-
 const title = 'Blog';
 const description = 'Latest articles.';
 const permalink = 'https://example.com/blog';
@@ -36,7 +32,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 <style>
   h2,
   .post-item-footer {
-    font-family: Rubik, sans-serif;
+    font-family: var(--font-family-sans);
     font-weight: 700;
   }
 

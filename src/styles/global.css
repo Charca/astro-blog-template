@@ -2,6 +2,8 @@
   --background-body: #fff;
   --text-main: #36393b;
   --primary-color: #548E9B;
+  --font-family-serif: Merriweather, serif;
+  --font-family-sans: 'Fira Sans', sans-serif;
 }
 
 /* :root {
@@ -16,7 +18,7 @@
 
 body {
   margin: 0;
-  font-family: Merriweather, serif;
+  font-family: var(--font-family-serif);
   font-size: 16px;
   line-height: 1.6;
   background-color: var(--background-body);
@@ -24,14 +26,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Rubik, sans-serif;
+  font-family: var(--font-family-sans);
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 0.5em 0;
 }
 
 h1 {
-  font-family: Merriweather, serif;
+  font-family: var(--font-family-serif);
   font-size: 4em;
   margin: 0 0 1em 0;
 }
@@ -162,7 +164,7 @@ figure {
 
 table {
   border-collapse: collapse;
-  font-family: Rubik, sans-serif;
+  font-family: var(--font-family-sans);
   font-size: 1.125em;
   margin: 2em 0;
 }

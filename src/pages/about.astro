@@ -9,7 +9,7 @@ const permalink = `${Astro.site.href}about`;
 <BaseLayout title={title} description={description} permalink={permalink} current="about">
   <div class="container">
     <h1>About</h1>
-    <figure>
+    <figure class="about-image">
       <img src="/assets/about-illustration.webp" alt="Illustration of a notebook">
       <figcaption>
         Illustration by
@@ -28,19 +28,19 @@ const permalink = `${Astro.site.href}about`;
 </BaseLayout>
 
 <style>
-  figure {
+  .about-image {
     float: right;
     margin: -3em -7em 2em 2em;
     max-width: 300px;
   }
 
-  figure img {
+  .about-image img {
     border-radius: 8px;
     margin-bottom: 1.5em;
   }
 
   @media (max-width: 1020px) {
-    figure {
+    .about-image {
       float: none;
       margin: 0 auto 2em;
     }

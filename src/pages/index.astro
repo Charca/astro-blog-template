@@ -14,7 +14,7 @@ const permalink = Astro.site.href;
     </div>
 
     <figure>
-      <img alt='Illustration of person reading a book' src='/assets/home-illustration.webp'>
+      <img class="hero-image" alt="Illustration of person reading a book" src="/assets/home-illustration.webp" width="550">
       <figcaption>
         Illustration by
         <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
@@ -60,7 +60,7 @@ const permalink = Astro.site.href;
     text-align: left;
   }
 
-  img {
+  .hero-image {
     width: 100%;
     max-width: 550px;
     margin-bottom: 1em;
@@ -71,7 +71,7 @@ const permalink = Astro.site.href;
       font-size: 1.2em;
     }
 
-    img {
+    .hero-image {
       max-width: 400px;
     }
   }

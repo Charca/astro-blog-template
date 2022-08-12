@@ -6,4 +6,17 @@ import mdx from '@astrojs/mdx'
 export default defineConfig({
   site: 'https://astro-blog-template.netlify.app',
   integrations: [mdx(), svelte()],
+  markdown: {
+    shikiConfig: {
+      theme: 'nord',
+    },
+    rehypePlugins: [
+      [
+        'rehype-external-links',
+        {
+          target: '_blank',
+        },
+      ],
+    ],
+  },
 })

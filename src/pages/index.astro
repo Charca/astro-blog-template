@@ -16,7 +16,7 @@ const permalink = Astro.site.href;
     <div class="hero-image-container">
       <picture>
         <source srcset="/assets/home-illustration.webp" media="(min-width: 600px)">
-        <img class="hero-image" fetchpriority="high" alt="Illustration of person reading a book" src="/assets/home-illustration-small.webp" width="550" height="466">
+        <img class="hero-image" alt="Illustration of person reading a book" src="/assets/home-illustration-small.webp" width="550" height="466">
       </picture>
       <p class="caption">
         Illustration by
@@ -53,9 +53,13 @@ const permalink = Astro.site.href;
     font-size: 1.4em;
   }
 
-  .home-image-container {
+  .hero-image-container {
     margin: 0 1em;
     text-align: center;
+  }
+
+  .hero-image-container picture {
+    display: block;
     min-height: 250px;
   }
 

@@ -2,7 +2,7 @@
   --background-body: #fff;
   --text-main: #36393b;
   --text-secondary: #6b6f72;
-  --primary-color: #548E9B;
+  --primary-color: #548e9b;
   --font-family-serif: Merriweather, serif;
   --font-family-sans: 'Fira Sans', sans-serif;
 }
@@ -11,10 +11,12 @@
   --background-body: #202122;
   --text-main: #fff;
   --text-secondary: #ccc;
-  --primary-color: #548E9B;
+  --primary-color: #548e9b;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -27,7 +29,12 @@ body {
   color: var(--text-main);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-family-sans);
   font-weight: 700;
   line-height: 1.2;
@@ -61,13 +68,16 @@ h6 {
   font-size: 1.2em;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
   font-size: 1.3rem;
   line-height: 1.75em;
   margin: 1.2em 0;
 }
 
-ol, ul {
+ol,
+ul {
   padding-left: 2rem;
   -webkit-padding-start: 5%;
   -webkit-padding-end: 5%;
@@ -84,7 +94,7 @@ li p {
 
 a {
   color: inherit;
-  transition: color linear .15s;
+  transition: color linear 0.15s;
 }
 
 a:hover {
@@ -93,18 +103,19 @@ a:hover {
 
 p a {
   text-decoration: none;
-  box-shadow: inset 0 -0.12em 0 var(--primary-color);;
-  -webkit-transition: box-shadow .2s ease-in-out, color .2s ease-in-out;
-  transition: box-shadow .2s ease-in-out, color .2s ease-in-out;
+  box-shadow: inset 0 -0.12em 0 var(--primary-color);
+  -webkit-transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 p a:hover {
-  box-shadow: inset 0 -1.5em 0 var(--primary-color);;
-  color: #FFF;
+  box-shadow: inset 0 -1.5em 0 var(--primary-color);
+  color: #fff;
 }
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 hr {
@@ -112,7 +123,7 @@ hr {
   border: 0;
   height: 10px;
   margin: 40px auto;
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg width=\'20\' height=\'10\'  viewBox=\'0 0 20 10\' xmlns=\'http://www.w3.org/2000/svg\' fill-rule=\'evenodd\' clip-rule=\'evenodd\' stroke-miterlimit=\'10\'%3e%3cpath fill=\'none\' d=\'M0 0h20v10H0z\'/%3e%3cclipPath id=\'a\'%3e%3cpath d=\'M0 0h20v10H0z\'/%3e%3c/clipPath%3e%3cg clip-path=\'url(%23a)\'%3e%3cpath d=\'M20 7.384c-4.999-.001-5-4.768-9.999-4.768C5 2.616 5 7.384 0 7.384\' fill=\'none\' stroke-width=\'3\' stroke=\'%23548E9B\'/%3e%3c/g%3e%3c/svg%3e');
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='10'  viewBox='0 0 20 10' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-miterlimit='10'%3e%3cpath fill='none' d='M0 0h20v10H0z'/%3e%3cclipPath id='a'%3e%3cpath d='M0 0h20v10H0z'/%3e%3c/clipPath%3e%3cg clip-path='url(%23a)'%3e%3cpath d='M20 7.384c-4.999-.001-5-4.768-9.999-4.768C5 2.616 5 7.384 0 7.384' fill='none' stroke-width='3' stroke='%23548E9B'/%3e%3c/g%3e%3c/svg%3e");
 }
 
 code {
@@ -127,8 +138,8 @@ code {
 }
 
 pre {
-  border-radius: 8px!important;
-  margin: 1.2em 0!important;
+  border-radius: 8px !important;
+  margin: 1.2em 0 !important;
 }
 
 pre code {
@@ -248,7 +259,9 @@ input[name='theme-toggle'] {
     font-size: 14px;
   }
 
-  p, ul, ol {
+  p,
+  ul,
+  ol {
     font-size: 1.2rem;
     margin: 1em 0;
   }

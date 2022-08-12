@@ -5,7 +5,7 @@ const { current = '' } = Astro.props;
 
 <style>
   nav {
-    align-items: flex-end;
+    align-items: center;
     display: flex;
     flex: 1;
     font-family: var(--font-family-sans);
@@ -47,11 +47,17 @@ const { current = '' } = Astro.props;
   .selected::before {
     background: var(--primary-color);
   }
+
+  .theme-toggle-container {
+    width: 75px;
+  }
 </style>
 
 <nav>
   <a class={current === "" ? "selected" : ""} href='/'>home</a>
   <a class={current === "about" ? "selected" : ""} href='/about'>about</a>
   <a class={current === "blog" ? "selected" : ""} href='/blog'>blog</a>
-  <ThemeToggleButton client:load />
+  <div class="theme-toggle-container">
+    <ThemeToggleButton client:load />
+  </div>
 </nav>

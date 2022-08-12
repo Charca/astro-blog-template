@@ -1,9 +1,13 @@
 ---
+import '../styles/global.css'
+import '../styles/highlight.css'
+
 export interface Props {
   title: string;
   description: string;
   permalink: string;
 }
+
 const { title, description, permalink } = Astro.props;
 const socialUrl = Astro.site.href + 'assets/social.png'
 ---
@@ -37,10 +41,6 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-<!-- Styles -->
-<link rel="stylesheet" href={Astro.resolve('../styles/global.css')} />
-<link rel="stylesheet" href={Astro.resolve('../styles/highlight.css')} />
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script>

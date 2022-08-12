@@ -5,25 +5,25 @@ const title = 'Blog';
 const description = 'Latest articles.';
 const permalink = `${Astro.site.href}blog`;
 
-let allPosts = await Astro.fetchContent('../../data/blog-posts/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+let allPosts = await Astro.glob('../../data/blog-posts/*.md');
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="blog">
   <div class="container">
     <h1>Blog</h1>
     {allPosts.map((post, index) => {
-      const href = `/blog/${post.file.pathname.split('/').pop().split('.').shift()}`;
+      const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
       return (
         <div>
           { index !== 0 && <hr /> }
           <div class="post-item">
             <h2>
-              <a href={href}>{post.title}</a>
+              <a href={href}>{post.frontmatter.title}</a>
             </h2>
-            <p>{post.description}</p>
+            <p>{post.frontmatter.description}</p>
             <div class="post-item-footer">
-              <span class="post-item-date">— {post.publishDate}</span>
+              <span class="post-item-date">— {post.frontmatter.publishDate}</span>
             </div>
           </div>
         </div>

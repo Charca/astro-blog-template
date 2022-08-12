@@ -6,11 +6,13 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^0.21.5",
-    "@astrojs/renderer-svelte": "^0.2.1"
+    "@astrojs/mdx": "^0.8.3",
+    "@astrojs/svelte": "^1.0.0",
+    "astro": "^1.0.3"
   },
   "dependencies": {
     "reading-time": "^1.5.0"

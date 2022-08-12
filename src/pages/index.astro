@@ -13,15 +13,15 @@ const permalink = Astro.site.href;
       <p>Check out the docs on <a href="https://www.github.com/Charca/astro-blog-template" target="_blank" rel="noopener">GitHub</a> to get started.</p>
     </div>
 
-    <figure>
+    <div class="hero-image-container">
       <img class="hero-image" alt="Illustration of person reading a book" src="/assets/home-illustration.webp" width="550" height="466">
-      <figcaption>
+      <p class="caption">
         Illustration by
         <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
         from
         <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
-      </figcaption>
-    </figure>
+      </p>
+    </div>
   </div>
 </BaseLayout>
 
@@ -50,12 +50,12 @@ const permalink = Astro.site.href;
     line-height: 1.5;
   }
 
-  figure {
+  .home-image-container {
     margin: 0 1em;
     text-align: center;
   }
 
-  figcaption {
+  .caption {
     font-size: .8em;
     font-style: italic;
     text-align: left;

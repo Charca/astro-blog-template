@@ -10,6 +10,8 @@
 
 ```
 npm init astro -- --template Charca/astro-blog-template
+# or
+pnpm create astro -- --template Charca/astro-blog-template
 ```
 
 ### On StackBlitz

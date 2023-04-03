@@ -11,7 +11,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 <BaseLayout title={title} description={description} permalink={permalink} current="blog">
   <div class="container">
-    <h1>Blog</h1>
+    <h1>博客</h1>
     {allPosts.map((post, index) => {
       const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
       return (

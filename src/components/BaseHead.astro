@@ -38,7 +38,7 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <meta property="twitter:image" content={socialUrl} />
 
 <!-- This is intentionally inlined to avoid FOUC -->
-<script>
+<script is:inline>
   const root = document.documentElement;
   const theme = localStorage.getItem('theme');
   if (theme === 'dark' || (!theme) && window.matchMedia('(prefers-color-scheme: dark)').matches) {

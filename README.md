@@ -18,7 +18,7 @@ npm init astro -- --template Charca/astro-blog-template
 
 ## ✨ Features:
 
-- ✅ Astro 1.0
+- ✅ Astro 4.0
 - ✅ Dark Mode
 - ✅ Full Markdown support
 - ✅ SEO-friendly setup with canonical URLs and OpenGraph data

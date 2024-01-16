@@ -1,16 +1,17 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
-import '../styles/fonts.css'
-import '../styles/global.css'
+import "../styles/global.css";
+import { join } from "node:path";
+import { AstroFont } from "astro-font";
+import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
-  title: string
-  description: string
-  permalink: string
+  title: string;
+  description: string;
+  permalink: string;
 }
 
-const { title, description, permalink } = Astro.props
-const socialUrl = Astro.site.href + 'assets/social.png'
+const { title, description, permalink } = Astro.props;
+const socialUrl = Astro.site.href + "assets/social.png";
 ---
 
 <!-- Global Metadata -->
@@ -37,18 +38,89 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={socialUrl} />
 
+<AstroFont
+  config={[
+    {
+      name: "Fira Sans",
+      src: [
+        {
+          style: "normal",
+          weight: "700",
+          path: join(
+            process.cwd(),
+            "public",
+            "assets",
+            "fonts",
+            "va9B4kDNxMZdWfMOD5VnLK3eRhf6Xl7Glw.woff2"
+          ),
+          css: {
+            "unicode-range": `U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;`,
+          },
+        },
+      ],
+      preload: false,
+      display: "swap",
+      fallback: "sans-serif",
+      cssVariable: "font-family-sans",
+    },
+    {
+      name: "Merriweather",
+      src: [
+        {
+          style: "normal",
+          weight: "400",
+          path: join(
+            process.cwd(),
+            "public",
+            "assets",
+            "fonts",
+            "u-440qyriQwlOrhSvowK_l5-fCZMdeX3rg.woff2"
+          ),
+          css: {
+            "unicode-range": `U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;`,
+          },
+        },
+        {
+          style: "normal",
+          weight: "700",
+          path: join(
+            process.cwd(),
+            "public",
+            "assets",
+            "fonts",
+            "u-4n0qyriQwlOrhSvowK_l52xwNZWMf6hPvhPQ.woff2"
+          ),
+          css: {
+            "unicode-range": `U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;`,
+          },
+        },
+      ],
+      preload: false,
+      display: "swap",
+      fallback: "serif",
+      cssVariable: "font-family-serif",
+    },
+  ]}
+/>
+
 <ViewTransitions />
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script is:inline>
-  const root = document.documentElement
-  const theme = localStorage.getItem('theme')
+  const root = document.documentElement;
+  const theme = localStorage.getItem("theme");
   if (
-    theme === 'dark' ||
-    (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    theme === "dark" ||
+    (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
   ) {
-    root.classList.add('theme-dark')
+    root.classList.add("theme-dark");
   } else {
-    root.classList.remove('theme-dark')
+    root.classList.remove("theme-dark");
   }
 </script>

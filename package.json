@@ -13,9 +13,13 @@
     "@astrojs/mdx": "^2.0.0",
     "@astrojs/svelte": "^5.0.0",
     "astro": "^4.0.1",
+    "astro-font": "^0.0.72",
     "reading-time": "^1.5.0",
     "rehype-external-links": "^3.0.0",
     "remark-gfm": "^4.0.0",
     "remark-smartypants": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.3"
   }
 }

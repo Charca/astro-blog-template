@@ -196,10 +196,12 @@ table {
 th {
   border-bottom: 2px solid #cccccc;
   padding: 0.4em 0.8em;
+  word-break: break-word;
 }
 
 td {
   padding: 0.4em 0.8em;
+  word-break: break-word;
 }
 
 .container {

@@ -16,6 +16,12 @@ npm init astro -- --template Charca/astro-blog-template
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/charca/astro-blog-template)
 
+### Deploy to Wasmer Edge
+
+[![Deploy to Wasmer](https://img.shields.io/badge/Deploy%20to-Wasmer-171717?logo=wasmer&logoColor=white)](https://wasmer.io/apps/create?github=Charca%2Fastro-blog-template)
+
+The site builds to static files in `./dist/` (`npm run build`), which Wasmer Edge can host. The button imports this repository; to customize your blog, import your own copy or fork instead.
+
 ## ✨ Features:
 
 - ✅ Astro 4.0
